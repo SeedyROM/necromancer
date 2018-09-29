@@ -1,5 +1,5 @@
 import setuptools
-from packagename.version import Version
+from necromancer.version import Version
 
 
 setuptools.setup(name='py-boilerplate',
@@ -8,8 +8,8 @@ setuptools.setup(name='py-boilerplate',
                  long_description=open('README.md').read().strip(),
                  author='Package Author',
                  author_email='you@youremail.com',
-                 url='http://path-to-my-packagename',
-                 py_modules=['packagename'],
+                 url='http://path-to-my-necromancer',
+                 py_modules=['necromancer'],
                  install_requires=[],
                  license='MIT License',
                  zip_safe=False,
