@@ -21,4 +21,4 @@ def parse_args(**kwargs):
     except config.ConfigException as e:
         print(chalk.red('Template Error:'))
         print(chalk.red('---------------'))
-        print(chalk.yellow('Nonexistant or invalid template specified!'))
+        print(chalk.yellow(e))
