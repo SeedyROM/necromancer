@@ -2,8 +2,10 @@ import glob
 import json
 import os
 import sys
+import chalk
 
 from necromancer.template.config import (
+    ConfigException,
     find_plugin,
     load_plugin_config
 )
@@ -12,11 +14,10 @@ from necromancer.template.config import (
 class CLI:
 
     @staticmethod
-    def parse_args():
-        path = './dsjadjsakjd'
+    def parse_args(**kwargs):
 
         try:
             find_plugin(path)
             load_plugin_config(path)
-        except:
-            
+        except ConfigException as e:
+            print(chalk.red('Nonexistant or invalid template specified!'))

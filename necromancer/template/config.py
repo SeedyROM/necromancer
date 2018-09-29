@@ -4,16 +4,22 @@ import sys
 DEBUG = True
 
 
-class TemplateDoesNotExist(BaseException):
+class ConfigException(BaseException):
+    '''Base configuration exception
+    '''
+
+
+class TemplateDoesNotExist(ConfigException):
     '''Exception to be raised when the template does not exist
     '''
 
 
-class InvalidConfiguration(BaseException):
+class InvalidConfiguration(ConfigException):
     '''Exception to be raise if the plug-in configuration is invalid
     '''
 
 
+# TODO: Determine type from command line argument regex patterns
 def find_plugin(path, type='local'):
     '''Determine if the specified plug-in exists
 
