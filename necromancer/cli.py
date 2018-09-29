@@ -4,7 +4,8 @@ import os
 import sys
 
 
-class Necromancer:
+class CLI:
+
     @staticmethod
     def parse_args():
         print('Hella!')
