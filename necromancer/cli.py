@@ -1,7 +1,7 @@
 """Necromancer: A project boilerplate tool-kit!"
 
 Usage:
-  necro ship [r[aise]] <plugin-or-path>...
+  necro raise <path>
   necro (-h | --help)
   necro --version
 
@@ -13,13 +13,12 @@ import chalk
 from necromancer.template import config
 
 
-class CLI:
-
-    @staticmethod
-    def parse_args(**kwargs):
-        path = kwargs['path']
-        try:
-            config.find_plugin(path)
-            config.load_plugin_config(path)
-        except config.ConfigException as e:
-            print(chalk.red('Nonexistant or invalid template specified!'))
+def parse_args(**kwargs):
+    path = kwargs['<path>']
+    try:
+        config.find_plugin(path)
+        config.load_plugin_config(path)
+    except config.ConfigException as e:
+        print(chalk.red('Template Error:'))
+        print(chalk.red('---------------'))
+        print(chalk.yellow('Nonexistant or invalid template specified!'))
