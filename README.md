@@ -1,4 +1,3 @@
 # necromancer
-=============
 
 It's here!
