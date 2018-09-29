@@ -20,4 +20,3 @@ def parse_args(args):
         print(chalk.red('Template Error:'))
         print(chalk.red('---------------'))
         print(chalk.yellow(e))
-
