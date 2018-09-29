@@ -3,7 +3,7 @@
 Usage: necro <command> [<args>...]
 
 Commands:
-    r raise          Raise a template from a plug-in
+    r raise <path> Raise a template from a plug-in
 
 Options:
     -h --help        Show this screen
@@ -13,12 +13,11 @@ import chalk
 from necromancer.template import config
 
 
-def parse_args(**kwargs):
-    path = kwargs['<path>']
+def parse_args(args):
     try:
-        config.find_plugin(path)
-        config.load_plugin_config(path)
+        print(args)
     except config.ConfigException as e:
         print(chalk.red('Template Error:'))
         print(chalk.red('---------------'))
         print(chalk.yellow(e))
+
