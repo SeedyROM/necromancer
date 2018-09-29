@@ -1,13 +1,13 @@
 """Necromancer: A project boilerplate tool-kit!"
 
-Usage:
-  necro raise <path>
-  necro (-h | --help)
-  necro [-v, --version]
+Usage: necro <command> [<args>...]
+
+Commands:
+    r raise          Raise a template from a plug-in
 
 Options:
-  -h --help     Show this screen.
-  --version     Show version.
+    -h --help        Show this screen
+    -v --version     Show version
 """
 import chalk
 from necromancer.template import config
