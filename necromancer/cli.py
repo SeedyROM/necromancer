@@ -3,7 +3,7 @@
 Usage:
   necro raise <path>
   necro (-h | --help)
-  necro --version
+  necro [-v, --version]
 
 Options:
   -h --help     Show this screen.
