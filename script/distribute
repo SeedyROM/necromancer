@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Test app
+#
+
+python setup.py sdist
+python -m twine upload dist/necromancer-0.0.1.tar.gz
+
+# vim: ft=sh:
+
