@@ -3,8 +3,6 @@
 # Test app
 #
 
-deactivate 2> /dev/null
-source ~/.bash_profile
 python setup.py sdist
 python -m twine upload dist/necromancer-0.0.1.tar.gz
 
