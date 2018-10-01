@@ -4,7 +4,7 @@
 #
 
 python setup.py sdist
-python -m twine upload dist/*
+python -m twine upload dist/*.tar.gz
 
 # vim: ft=sh:
 
