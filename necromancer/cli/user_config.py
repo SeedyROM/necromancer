@@ -45,7 +45,6 @@ def get_config():
     ''' get the user config or none '''
 
     user_settings = find_user_settings
-
     user_conf = open_toml_file(user_settings)
 
-    print(user_conf)
+    return user_conf
