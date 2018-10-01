@@ -12,7 +12,7 @@ setuptools.setup(name='necromancer',
                  py_modules=['necromancer'],
                  entry_points={
                      'console_scripts': [
-                         'necro=necromancer.cli:__main__'
+                         'necro=necromancer.cli.__main__'
                      ],
                  },
                  install_requires=[
