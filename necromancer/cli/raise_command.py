@@ -24,14 +24,5 @@ from docopt import docopt
 from necromancer.template import plug_in
 
 
-def raise_module(argv):
-    args = docopt(__doc__, argv=argv)
-    plugin_type = args['<location>']
-    filepattern = args['<filepattern>']
-
-    try:
-        plug_in.find_plugin(filepattern, plugin_type=plugin_type)
-    except BaseException as e:
-        print(chalk.red('Failed to raise plugin:'))
-        print(chalk.red('----------------------'))
-        print(e)
+if __name__ == '__main__':
+    args = docopt(__doc__)
