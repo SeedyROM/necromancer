@@ -1,5 +1,4 @@
-from necromancer.cli import cli_runner
+from necromancer import cli
 
-
-return_code = cli_runner()
-quit(return_code)
+return_code = cli.runner()
+exit(return_code)

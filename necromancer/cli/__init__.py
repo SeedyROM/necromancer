@@ -30,7 +30,7 @@ red_bold = red + chalk.utils.FontFormat('bold')
 yellow = chalk.Chalk('yellow')
 
 
-def cli_runner():
+def runner():
     ''' parse args then call the right function '''
     args = docopt(__doc__, version='neco 0.0.1', options_first=True)
 
