@@ -21,7 +21,7 @@ class InvalidConfiguration(ConfigException):
 
 
 # TODO: Determine type from command line argument regex patterns
-def find_plugin(path, plugin_type='local'):
+def find(path, plugin_type='local'):
     '''Determine if the specified plug-in exists
 
     Args:
@@ -30,12 +30,12 @@ def find_plugin(path, plugin_type='local'):
     '''
 
     if plugin_type == 'local':
-        find_local_plugin(path)
+        find_local(path)
     else:
         raise InvalidConfiguration('Invalid plug-in type')
 
 
-def load_plugin_config(path):
+def load_config(path):
     '''Determine if the path is a proper necromancer plug-in
 
     Args:
@@ -43,7 +43,7 @@ def load_plugin_config(path):
     '''
 
 
-def find_local_plugin(path):
+def find_local(path):
     ''' Find a plug in the local file system
 
     Args:
