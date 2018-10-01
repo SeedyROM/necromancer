@@ -23,4 +23,4 @@ setuptools.setup(name='necromancer',
                  license='MIT License',
                  zip_safe=False,
                  keywords='boilerplate generator',
-                 classifiers=['Packages', 'Boilerplate', 'Generators'])
+)
