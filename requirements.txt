@@ -22,7 +22,7 @@ lazy-object-proxy==1.3.1
 MarkupSafe==1.0
 mccabe==0.6.1
 more-itertools==4.3.0
--e git+https://github.com/SeedyROM/necromancer.git@68a8aa5f2a1b2e6dc5c7c7725c1e5e3e16aa56b0#egg=necromancer
+-e git+https://github.com/SeedyROM/necromancer.git@6d61636e8936af0a2571b1e74b6824d91521e204#egg=necromancer
 pep8==1.7.1
 pkginfo==1.4.2
 pluggy==0.7.1
