@@ -10,7 +10,16 @@ setuptools.setup(name='necromancer',
                  author_email='me@seedyrom.io',
                  url='http://github.com/SeedyROM/necromancer',
                  py_modules=['necromancer'],
-                 install_requires=[],
+                 entry_points={
+                     'console_scripts': [
+                         'necro=necomancer.cli:__main__'
+                     ],
+                 },
+                 install_requires=[
+                     'docopt',
+                     'toml',
+                     'jinja2'
+                 ],
                  license='MIT License',
                  zip_safe=False,
                  keywords='boilerplate generator',
