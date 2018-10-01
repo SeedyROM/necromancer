@@ -13,6 +13,8 @@ The most commonly used git commands are:
 See 'git help <command>' for more information on a specific command.
 """
 import chalk
+import runpy
+from subprocess import call
 from docopt import docopt
 
 args = docopt(__doc__,
@@ -22,8 +24,9 @@ args = docopt(__doc__,
 argv = [args['<command>']] + args['<args>']
 
 if args['<command>'] in ['r', 'raise']:
-    from necromancer.cli import raise_command
-    print(docopt(raise_command.__doc__, argv=argv))
+    exit(
+        call(['python', '-m', 'necromancer.cli.raise_command'] + argv)
+    )
 elif args['<command>'] in ['h', 'help', None]:
     exit(
         __doc__

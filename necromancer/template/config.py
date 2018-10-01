@@ -1,4 +1,5 @@
 import os
+import toml
 import sys
 
 DEBUG = True
@@ -20,7 +21,7 @@ class InvalidConfiguration(ConfigException):
 
 
 # TODO: Determine type from command line argument regex patterns
-def find_plugin(path, type='local'):
+def find_plugin(path, plugin_type='local'):
     '''Determine if the specified plug-in exists
 
     Args:
@@ -28,7 +29,7 @@ def find_plugin(path, type='local'):
         @type(str) default 'local' : 'The location of the plug-in
     '''
 
-    if type == 'local':
+    if plugin_type == 'local':
         find_local_plugin(path)
     else:
         raise InvalidConfiguration('Invalid plug-in type')
