@@ -4,7 +4,7 @@ from necromancer.version import Version
 
 setuptools.setup(
     name='necromancer',
-    version=Version('0.0.1').number,
+    version=Version('0.0.2').number,
     description='Python Package Boilerplate',
     long_description=open('README.md').read().strip(),
     author='Chris Hayden and Zack Kollar',
