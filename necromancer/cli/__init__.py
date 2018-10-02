@@ -32,7 +32,7 @@ yellow = chalk.Chalk('yellow')
 
 def runner():
     ''' parse args then call the right function '''
-    args = docopt(__doc__, version='necro 0.0.1', options_first=True)
+    args = docopt(__doc__, version='necro 0.0.2', options_first=True)
 
     argv = [args['<command>'], *args['<args>']]
 
